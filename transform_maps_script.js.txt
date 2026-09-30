@@ -1,0 +1,15 @@
+(function runTransformScript(source, map, log, target) {
+
+    // Check if email is empty
+    if (!source.u_email) {
+        ignore = true;
+        log.info("Record skipped because email is empty.");
+        return;
+    }
+
+    // Convert name to uppercase
+    if (source.u_name) {
+        target.name = source.u_name.toUpperCase();
+    }
+
+})(source, map, log, target);
